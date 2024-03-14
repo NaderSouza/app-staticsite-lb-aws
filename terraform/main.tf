@@ -85,7 +85,7 @@ resource "aws_instance" "instance-1a" {
   subnet_id              = aws_subnet.sn_pub_az1a.id
   vpc_security_group_ids = [aws_security_group.vpc_sg_pub.id]
   user_data              = base64encode(data.template_file.user_data.rendered)
-  key_name               = "vockey"
+  key_name               = "LockID"
 }
 
 resource "aws_instance" "instance-1b" {
@@ -94,7 +94,7 @@ resource "aws_instance" "instance-1b" {
   subnet_id              = aws_subnet.sn_pub_az1b.id
   vpc_security_group_ids = [aws_security_group.vpc_sg_pub.id]
   user_data              = base64encode(data.template_file.user_data.rendered)
-  key_name               = "vockey"
+  key_name               = "LockID"
 }
 
 # RESOURCE: LOAD BALANCER TARGET GROUP
